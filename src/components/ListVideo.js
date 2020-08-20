@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 class ListVideo extends Component{
@@ -24,7 +24,7 @@ class ListVideo extends Component{
                     <video controls autoPlay>
                         <source src = { this.props.video }></source>
                     </video>
-                    <div class="title">
+                    <div className="title">
                         <h3>
                             { this.props.name }
                         </h3>

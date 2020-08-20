@@ -9,10 +9,9 @@ import Details3 from './components/Details3';
 import Infor1 from './components/Infor1';
 import Infor2 from './components/Infor2';
 import Infor3 from './components/Infor3';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 function App() {
-
   return (
     <div className="App">
       <header className="App-header">
@@ -78,8 +77,10 @@ function App() {
               <Link to="/infor3" className="btn btn-info">Infor</Link>
               <Link to="/listvideo" className="btn btn-dark">Hide</Link>
             </p>
-            <Route path="/details3" component={Details3}></Route>
-            <Route path="/infor3" component={Infor3}></Route>
+            <Switch>
+              <Route path="/details3" component={Details3}></Route>
+              <Route path="/infor3" component={Infor3}></Route>
+            </Switch>
           </Router>
         </div>
 
@@ -87,5 +88,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
